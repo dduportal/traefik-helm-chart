@@ -69,13 +69,20 @@ dashboard:
 
 logs:
   loglevel: WARN
+
 #
-resources: {}
-  # requests:
-  #   cpu: "100m"
-  #   memory: "50Mi"
-  # limits:
-  #   cpu: "300m"
-  #   memory: "150Mi"
+# Additional YAML Configuration for customisation
+#
+customYaml:
+  # Configure the main container of Traefik's Pod. For 
+  traefikContainer:
+    # Example with custom resource limits
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "50Mi"
+      limits:
+        cpu: "300m"
+        memory: "150Mi"
 nodeSelector: {}
 tolerations: []
